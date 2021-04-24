@@ -2,6 +2,11 @@
 
 .basket
 	margin-bottom: 120px
+	+media(md)
+		margin-bottom: 80px
+	+media(sm)
+		margin-bottom: 60px
+
 	&__wrap-table
 		overflow-x: auto
 		overflow-y: hidden
@@ -68,6 +73,10 @@
 		text-transform: uppercase
 		&--elem
 			font-size: 24px
+			+media(mdx)
+				font-size: 22px
+			+media(sm)
+				font-size: 20px
 
 		&--capacity
 			font-size: 18px
@@ -239,7 +248,6 @@
 			padding: 35px 20px
 		li
 			display: flex
-			//flex-wrap: wrap
 			justify-content: space-between
 			font-size: 18px
 			line-height: 1.2
@@ -307,6 +315,10 @@
 		margin: 80px auto
 		font-weight: 900
 		transition: 0.3s color
+		+media(md)
+			font-size: 50px
+		+media(sm)
+			font-size: 40px
 		a
 			display: block
 			position: relative
