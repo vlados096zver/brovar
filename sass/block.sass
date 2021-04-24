@@ -1,0 +1,330 @@
+@import 'responsive'
+
+.menu
+	position: fixed
+	z-index: 12
+	top: 0px
+	left: 0px
+	display: flex	
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 100px
+	min-height: 100vh	
+	background-color: #fff
+	padding: 0 22px
+	border-right: 1px solid #333
+	+media(lg)
+		width: 65px
+		padding: 0 12px
+	+media(lgm)
+		display: none	
+
+	&__logo	
+		display: block
+		max-width: 88px
+		width: 100%
+		margin: 0 auto
+		margin-bottom: 47px
+		img
+			display: block
+			width: 100%
+			margin: 0 auto
+
+	&__link
+		display: block
+		font-size: 16px
+		color: #000
+		user-select: none
+		text-transform: uppercase
+		svg
+			display: block
+			width: 20px
+			height: 18px
+			fill: #115F41
+
+	&__list
+		li:not(:last-child)
+			margin-bottom: 40px
+			+media(desc)
+				margin-bottom: 35px
+
+		li:not(:first-child)
+			.menu__link
+				writing-mode: vertical-rl
+				transform: rotate(-180deg)
+
+
+.block
+	min-height: 100vh
+
+	&__row
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 275px
+		position: relative
+		+media(lg)
+			height: 190px
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			left: 0px
+
+		&:after	
+			width: 50%
+			height: 100%
+			background-color: #f6f6f6
+			+media(lgm)
+				display: none
+
+		&:before
+			z-index: 2
+			top: 50%
+			transform: translateY(-50%)
+			left: 104px
+			right: 104px
+			width: calc(100% - 208px)
+			height: 2px
+			background-color: #115F41
+			+media(lgm)
+				display: none
+
+	&__logo
+		position: relative
+		z-index: 2
+		max-width: 150px
+		+media(lg)
+			max-width: 120px
+
+	&__wrap
+		//position: relative
+		&:after
+			position: absolute
+			content: 'Ваш брова'
+			white-space: nowrap
+			top: 0px
+			left: 140px
+			font-size: 15vw
+			line-height: 1.2
+			color: #115F410D
+			text-transform: uppercase
+			font-weight: 900
+			+media(maxSize)
+				font-size: 300px
+			+media(mdx)
+				display: none
+
+	&__holder
+		position: relative
+		height: calc(100vh - 275px)
+		+media(lg)
+			height: calc(100vh - 190px)
+		&:after
+			position: absolute
+			content: ' '
+			bottom: 0px
+			right: 120px
+			max-width: 950px
+			width: 100%
+			height: calc(100% + 30px)
+			background-image: url(../img/block-pic.png)
+			background-repeat: no-repeat
+			background-position: bottom center
+			background-size: contain
+			+media(lgxs)
+				right: 0px
+
+	&__title
+		position: relative
+		z-index: 2
+		font-size: 48px
+		color: #000
+		text-transform: uppercase
+		padding-top: 130px
+		padding-bottom: 5px
+		font-weight: 200
+		+media(lg)
+			padding-top: 76px
+		+media(lgxs)
+			padding-top: 12px		
+		+media(mdx)
+			font-size: 35px	
+			padding-top: 32px	
+		+media(xs)
+			font-size: 30px	
+			padding-top: 56px	
+		+media(xxs)
+			font-size: 25px
+			padding-top: 63px	
+		+media(mini)
+			font-size: 21px	
+			padding-top: 68px
+		span
+			display: block
+			font-size: 72px
+			padding-top: 25px
+			font-weight: 900
+			+media(lgs)
+				font-size: 55px	
+			+media(mdx)
+				font-size: 50px
+			+media(md)
+				font-size: 46px	
+			+media(xs)
+				font-size: 30px	
+
+	&__year
+		position: relative
+		z-index: 3
+		display: block
+		font-size: 64px
+		line-height: 1.2
+		fill: none
+		stroke: #115F41
+		stroke-width: 2px
+		font-weight: 900
+		+media(md)
+			font-size: 50px
+		+media(sm)
+			font-size: 45px	
+		+media(xs)
+			font-size: 28px	
+
+	&__elem
+		position: absolute
+		bottom: 0px
+		display: flex	
+		align-items: center
+		+media(lg)
+			padding-bottom: 25px	
+
+	&__decor
+		width: 350px
+		height: 175px
+		background-color: #f6f6f6
+		margin-right: 90px	
+		+media(desc)
+			width: 200px	
+			margin-right: 50px	
+			height: 150px	
+		+media(lg)
+			display: none	
+
+	&__btn
+		position: relative
+		z-index: 3
+		cursor: pointer
+		display: block	
+		width: 40px	
+		height: 40px	
+		background-color: transparent
+		border: none
+		outline: none
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+
+		&:after
+			bottom: 4px
+			left: calc(50% - 12px)
+			width: 24px
+			height: 24px
+			border-right: 2px solid #115F41
+			border-bottom: 2px solid #115F41
+			transform: rotate(45deg)
+			transition: 0.3s border-color
+
+		&:before
+			top: 0px
+			left: calc(50% - 1px)
+			width: 2px	
+			height: 38px	
+			background-color: #115F41
+			transition: 0.3s background-color
+
+		&:hover
+			&:after
+				border-color: #04140e
+
+			&:before
+				background-color: #04140e
+
+	&__toggle
+		position: absolute
+		top: 53px 
+		right: 72px
+		width: 50px
+		height: 50px
+		+media(lg)
+			top: 30px
+		+media(xs)
+			right: 20px
+
+	&__points
+		cursor: pointer
+		width: 100%	
+		height: 100%
+
+	&__list
+		display: none
+		width: 100%
+		min-width: 200px
+		top: 100%
+		right: 0px
+		z-index: 8
+		position: absolute
+		padding-top: 36px
+		max-height: calc(100vh - 70px)
+		overflow-y: auto
+		overflow-x: hidden
+
+		li
+			width: max-content
+			display: block
+			text-align: right
+			margin-left: auto
+
+	&__link
+		display: block
+		font-size: 18px
+		color: #000
+		text-transform: uppercase
+		margin-bottom: 20px
+		+media(sm)
+			font-size: 17px
+
+	&__points
+		display: flex
+		outline: none
+		height: 50px
+		width: 50px
+		border: 0px
+		padding: 0px
+		background: transparent
+		transition: all 250ms ease-out
+		cursor: pointer
+		&:after,
+		&:before
+			content: ''
+			width: 50px
+			height: 2px
+			position: absolute
+			background: #1a1a1a
+			transition: all 250ms ease-out
+			will-change: transform
+
+		&:before
+			transform: translateY(15px)
+
+		&:after
+			 transform: translateY(35px)
+
+		&--open
+			&:before
+				transform: translateY(24px) rotate(45deg)
+
+			&:after
+				transform: translateY(24px) rotate(-45deg)

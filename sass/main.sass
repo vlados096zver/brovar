@@ -1,0 +1,152 @@
+@import 'responsive'
+
+body
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+	width: 100%
+	//min-height: 100vh
+	color: #333333
+	background-color: #fff
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: "roboto"
+
+img
+	max-width: 100%
+	height: auto
+
+.svg
+	&-about
+		position: absolute
+		width: 0px
+		height: 0px
+
+.container
+	max-width: 1230px
+	width: 100%
+	margin: 0 auto
+	padding: 0 15px
+	&--inner
+		max-width: 1920px
+		padding: 0 60px
+		+media(lgs)
+			padding: 0px
+
+	&--elem
+		max-width: 1920px
+		padding: 0px
+
+	&--contacts
+		max-width: 830px
+
+	&--main
+		position: relative
+		max-width: 1920px
+		margin: 0px auto
+		padding: 0px
+
+	&--content
+		max-width: 1720px
+		padding: 0 160px
+		margin: 0 auto
+		+media(lgm)
+			padding: 0 15px
+
+	&--basket
+		max-width: 1270px
+		padding: 0 40px
+
+.input
+	display: block
+	width: 100%
+	font-size: 16px
+	background-color: #f3f3f3
+	color: #808080
+	border: none
+	outline: none
+	border-radius: 20px
+	padding: 20px
+	padding-bottom: 21px
+	&--area
+		resize: none
+		min-height: 150px
+
+	&.form-fail
+		border-color: #b00
+
+	&.form-done
+		border-color: #90ee90
+
+	&::placeholder
+		color: #333
+	&:focus::placeholder
+		color: transparent
+
+.title
+	max-width: 600px
+	position: relative
+	z-index: 3
+	font-size: 72px
+	line-height: 1.2
+	color: #115F41
+	text-transform: uppercase
+	padding-top: 40px
+	padding-bottom: 58px
+	font-weight: 900
+	+media(lgm)
+		font-size: 55px
+	+media(md)
+		max-width: 300px
+		font-size: 42px
+		padding-top: 25px
+		padding-bottom: 30px
+	+media(sm)
+		font-size: 35px
+	&:after
+		position: absolute
+		content: ' '
+		top: 0px
+		left: 0px
+		width: 100%
+		height: 2px
+		background-color: #115F41
+
+	&--inner
+		padding-top: 50px
+		margin: 0 auto
+		text-align: center
+
+.btn
+	display: block
+	width: 100%
+	cursor: pointer
+	font: inherit
+	font-size: 18px
+	color: #fff
+	background-color: transparent
+	border: none
+	border-radius: 20px
+	outline: none
+	text-align: center
+	text-transform: uppercase
+	padding: 14px 10px
+	padding-bottom: 15px
+	font-weight: normal
+	transition: 0.3s background-color, 0.3s color, 0.3s border
+
+	&--send
+		background-color: #115F41
+		color: #fff
+		max-width: 250px
+		margin: 0 auto
+		&[disabled]
+			cursor: default
+			opacity: 0.5
+			text-decoration: line-through
+
+		&:not(:disabled)
+			&:hover
+				background-color: #04140e

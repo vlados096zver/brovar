@@ -1,0 +1,162 @@
+@import 'responsive'
+
+.product
+	position: relative
+	z-index: 3
+	padding-top: 135px
+	+media(mdx)
+		padding-top: 80px
+	+media(sm)
+		padding-top: 50px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(sm)
+			max-width: 400px
+			margin: 0 auto
+
+	&__item
+		width: calc(100% / 3 - 40px)
+		background-color: #f6f6f6
+		padding-top: 55px
+		padding-bottom: 34px
+		padding-right: 30px
+		padding-left: 42px
+		margin: 0 20px
+		margin-bottom: 48px
+		+media(lgs)
+			padding: 40px 25px
+			padding-bottom: 35px
+		+media(mdx)
+			width: calc(100% / 2 - 40px)
+		+media(sm)
+			width: 100%
+			padding: 40px 20px
+			padding-bottom: 30px
+			margin: 0px
+			margin-bottom: 40px
+
+	&__image
+		height: 0px
+		padding-top: 88%
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center
+		margin: 0 auto
+		margin-bottom: 50px
+
+	&__subtitle
+		font-size: 24px
+		line-height: 1.2
+		color: #000
+		text-transform: uppercase
+		margin-bottom: 8px
+		font-weight: normal
+		+media(sm)
+			font-size: 22px
+		+media(xs)
+			font-size: 20px
+
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 18px
+
+	&__capacity
+		font-size: 18px
+		line-height: 1.2
+		color: #115F41
+		font-weight: normal
+
+	&__currency
+		font-size: 18px
+		line-height: 1.2
+		color: #000000
+		text-transform: uppercase
+		font-weight: 200
+
+	&__block
+		display: flex
+		align-items: center
+
+	&__cart
+		display: block
+		cursor: pointer
+		width: 40px
+		height: 40px
+		background-color: #115F41
+		border: none
+		outline: none
+		border-radius: 20px
+		margin-right: 20px
+		transition: 0.3s background-color
+		svg
+			display: block
+			width: 20px
+			height: 18px
+			fill: #f6f6f6
+			margin: 0 auto
+		&:hover
+			background-color: #04140e
+
+	&__count
+		cursor: default
+		display: block
+		max-width: 27px
+		font-size: 24px
+		color: #115F41
+		border: none
+		outline: none
+		background-color: transparent
+		margin-right: 10px
+		+media(lgs)
+			font-size: 22px
+
+	&__btn
+		display: block
+		position: relative
+		cursor: pointer
+		width: 20px
+		height: 20px
+		border: none
+		outline: none
+		background-color: transparent
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			background-color: #115F41
+			border-radius: 5px
+			transition: 0.3s background-color
+
+		&:after
+			top: calc(50% - 2px)
+			left: 0px
+			width: 20px
+			height: 4px
+			
+		&--increment	
+			margin-right: 10px
+			&:before
+				top: 0px
+				left: calc(50% - 2px)
+				width: 4px
+				height: 20px
+
+		&:hover
+			&:after,
+			&:before
+				background-color: #04140e
+
+	&__price
+		cursor: default
+		font-size: 36px
+		line-height: 1.2
+		color: #115F41
+		margin-left: auto
+		font-weight: 200
+		+media(lgs)
+			font-size: 28px

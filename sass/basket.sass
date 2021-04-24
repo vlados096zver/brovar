@@ -1,0 +1,348 @@
+@import 'responsive'
+
+.basket
+	margin-bottom: 120px
+	&__wrap-table
+		overflow-x: auto
+		overflow-y: hidden
+
+	.basket__item,
+	.basket__wrap-title
+		display: flex
+		align-items: center
+		min-width: 830px
+		.basket__title:nth-child(1), .basket__box:nth-child(1)
+			min-width: 440px
+			max-width: 275px
+			padding-left: 46px
+			padding-right: 20px
+			width: 100%
+
+		.basket__title:nth-child(2), .basket__box:nth-child(2)
+			min-width: 170px
+			max-width: 170px
+
+		.basket__title:nth-child(3), .basket__box:nth-child(3)
+			min-width: 135px
+			max-width: 135px
+
+		.basket__title:nth-child(4), .basket__box:nth-child(4)
+			min-width: 180px
+			max-width: 180px
+
+		.basket__title:nth-child(5), .basket__box:nth-child(5)
+			min-width: 200px
+			max-width: 200px
+
+		.basket__title:nth-child(5), .basket__box:nth-child(6)
+			min-width: 60px
+			max-width: 60px
+
+	&__title
+		font-size: 18px
+		line-height: 1.2
+		color: #000000
+		text-transform: uppercase
+		font-weight: normal
+		padding-bottom: 26px
+
+	&__item
+		width: min-content
+		display: flex
+		position: relative
+		margin-bottom: 32px
+		&:after
+			content: ""
+			position: absolute
+			top: 0px
+			bottom: 0px
+			left: 10px
+			right: 10px
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+			z-index: -1
+
+	&__box
+		display: flex
+		align-items: center
+		padding: 15px 0
+		text-transform: uppercase
+		&--elem
+			font-size: 24px
+
+		&--capacity
+			font-size: 18px
+
+	&__single
+		font-size: 36px
+		color: #000
+		font-weight: 200
+
+	&__sum
+		font-size: 18px
+		color: #115F41
+		padding-right: 8px
+		font-weight: 200
+		span
+			font-size: 36px
+			padding-right: 15px
+
+	&__input
+		max-width: 27px
+		width: 100%
+		display: inline-block
+		font-size: 24px
+		line-height: 1.2
+		color: #115F41
+		border: none
+		text-align: center
+		padding: 0px
+		margin-left: 15px
+		margin-right: 13px
+		+media(lgs)
+			font-size: 22px
+
+	&__arrow
+		cursor: pointer
+		display: block
+		position: relative
+		margin: 0 auto
+		width: 20px
+		height: 20px
+		border: none
+		background-color: #fff
+		outline: none
+		padding: 0px
+		transition: 0.3s background-color
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			background-color: #115F41
+			border-radius: 5px
+			transition: 0.3s background-color
+
+		&:after
+			top: calc(50% - 2px)
+			left: 0px
+			width: 20px
+			height: 4px
+			
+		&--increment	
+			&:before
+				top: 0px
+				left: calc(50% - 2px)
+				width: 4px
+				height: 20px
+
+		&:hover
+			&:after,
+			&:before
+				background-color: #04140e
+
+	&__close
+		cursor: pointer
+		position: relative
+		min-width: 25px
+		height: 25px
+		margin: 17px 0
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #fff
+		border: none
+		outline: none
+		padding: 0px
+		&:before, &:after
+			content: ''
+			position: absolute
+			left: 0px
+			width: 25px
+			height: 2px
+			background-color: #fb5555
+			transition: 0.3s background-color
+
+		&:before
+			bottom: 20px
+			transform: rotate(45deg)
+			transform-origin: 0 100%
+
+		&:after
+			top: 20px
+			transform: rotate(-45deg)
+			transform-origin: 0 0
+
+		&:hover
+			&:after,
+			&:before
+				background-color: #591e1e
+
+	&__col
+		position: relative
+
+	&__info
+		cursor: pointer
+		display: block
+		position: relative
+		width: 50px
+		height: 50px
+		background-color: #115F41
+		border: 2px solid #115F41
+		outline: none
+		border-radius: 25px
+		margin: 0 auto
+		margin-top: 40px
+		margin-bottom: 46px
+		transition: 0.3s background-color
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			background-color: #fff
+			border-radius: 5px
+			transform: 0.3s background-color
+
+		&:after
+			top: calc(50% - 2px)
+			left: calc(50% - 10px)
+			width: 20px
+			height: 4px
+
+		&:before
+			top: calc(50% - 10px)
+			left: calc(50% - 2px)
+			width: 4px
+			height: 20px
+
+		&:hover
+			background-color: #fff
+			&:after, 
+			&:before
+				background-color: #115F41
+
+	&__submenu
+		position: absolute
+		z-index: 3
+		opacity: 0
+		visibility: hidden
+		bottom: calc(100% + 36px)
+		left: 50%
+		transform: translateX(-50%)
+		max-width: 375px
+		width: 100%
+		min-width: 300px
+		background-color: #fff
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15)
+		padding: 35px 32px
+		padding-bottom: 25px
+		transition: 0.3s opacity
+		+media(sm)
+			padding: 35px 20px
+		li
+			display: flex
+			//flex-wrap: wrap
+			justify-content: space-between
+			font-size: 18px
+			line-height: 1.2
+			color: #000
+			text-transform: uppercase
+			margin-bottom: 16px
+			+media(md)
+				font-size: 17px
+			+media(sm)
+				font-size: 15px
+			span
+				display: block
+				&:last-child
+					min-width: 80px
+					padding-left: 25px
+					text-align: right
+
+		&--active
+			opacity: 1
+			visibility: visible
+
+	&__holder
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		text-transform: uppercase
+		font-size: 24px
+		padding-bottom: 35px
+		font-weight: 200
+
+	&__total
+		display: block
+		font-size: 36px
+		color: #000
+		padding: 0 22px
+
+	&__currency
+		font-size: 18px
+
+	&__block
+		display: flex
+		align-items: center
+
+.page-basket
+	margin-bottom: 108px
+	&__error
+		color: #8B0000
+		padding-bottom: 15px
+		padding-left: 20px
+		text-transform: uppercase
+		font-weight: 700
+		+media(sm)
+			padding-left: 0px
+
+	&__title
+		cursor: pointer
+		position: relative
+		width: max-content
+		font-size: 72px
+		line-height: 1.2
+		color: #115F41
+		text-transform: uppercase
+		text-align: center
+		margin: 80px auto
+		font-weight: 900
+		transition: 0.3s color
+		a
+			display: block
+			position: relative
+			color: #115F41
+			padding-left: 70px
+			transition: 0.3s color
+			&:after,
+			&:before
+				position: absolute
+				content: ' '
+
+			&:after
+				top: calc(50% - 10px)
+				left: 3px
+				width: 20px
+				height: 20px
+				transform: rotate(-45deg)
+				border-left: 2px solid #115F41
+				border-top: 2px solid #115F41
+				transition: 0.3s border
+
+			&:before
+				width: 36px
+				height: 2px
+				background-color: #115F41
+				top: calc(50% - 1px)
+				left: 0px
+				transition: 0.3s background-color
+
+			&:hover 
+				color: #04140e
+				&:after
+					border-color: #04140e
+
+				&:before
+					background-color: #04140e
+
+	.basket__holder
+		padding-bottom: 45px

@@ -1,0 +1,94 @@
+@import 'responsive'
+
+.contacts
+	&__map
+		position: relative
+		min-height: 1240px
+		margin-top: -385px
+		clip-path: url(#map-desc)
+		+media(lg)
+			clip-path: url(#map-lg)
+			margin-top: -175px
+			min-height: 800px
+		+media(md)
+			clip-path: url(#map-md)
+			margin-top: -60px
+			min-height: 600px
+		+media(sm)
+			min-height: 400px
+			margin-top: -35px
+		iframe
+			position: absolute
+			top: -40px
+			display: block
+			width: 100%
+			height: calc(100% + 40px)
+
+	&__block
+		position: relative
+		&:after
+			position: absolute
+			content: ' '
+			top: -2px
+			left: 0px
+			width: 100%
+			height: 4px
+			background-color: #fff
+	
+	&__item
+		margin-bottom: 35px
+		&--block
+			margin-bottom: 64px
+
+	&__inner
+		display: flex
+		justify-content: space-between
+		padding: 0 20px
+		+media(sm)
+			padding: 0px
+
+	&__label
+		display: inline-block
+		cursor: pointer
+		user-select: none
+		font-size: 18px
+		line-height: 1
+		color: #000
+		text-transform: uppercase
+		margin-bottom: 8px
+		font-weight: 900
+		+media(sm)
+			font-size: 17px
+
+	&__info
+		font-size: 18px
+		line-height: 1
+		color: #000
+		text-transform: uppercase
+		margin-bottom: 8px
+		font-weight: 200
+		+media(sm)
+			font-size: 17px
+
+	&__elem
+		margin-top: -240px
+		+media(lg)
+			margin-top: -32px
+		+media(lgs)
+			margin-top: -40px
+		+media(mdx)
+			margin-top: -20px
+		+media(md)
+			margin-top: 20px
+
+	&__wrap-error
+		margin-bottom: 10px
+
+	&__error
+		color: #8B0000
+		padding-bottom: 15px
+		padding-left: 20px
+		text-transform: uppercase
+		font-weight: 700
+		+media(sm)
+			padding-left: 0px

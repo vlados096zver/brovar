@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "roboto";
+    src: url("roboto-regular.eot");
+    src: url("roboto-regular.eot?#iefix") format("embedded-opentype"),
+    url("roboto-regular.woff") format("woff"),
+    url("roboto-regular.woff2") format("woff2"),
+    url("roboto-regular.ttf") format("truetype"),
+    url('roboto-regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("roboto-200.eot");
+    src: url("roboto-200.eot?#iefix") format("embedded-opentype"),
+    url("roboto-200.woff") format("woff"),
+    url("roboto-200.woff2") format("woff2"),
+    url("roboto-200.ttf") format("truetype"),
+    url('roboto-200.svg') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto-light";
+    src: url("roboto-light.eot");
+    src: url("roboto-light.eot") format("embedded-opentype"),
+    url("roboto-light.woff") format("woff"),
+    url("roboto-light.woff2") format("woff2"),
+    url("roboto-light.ttf") format("truetype"),
+    url('roboto-light.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: "roboto";
+    src: url("roboto-500.eot");
+    src: url("roboto-500.eot?#iefix") format("embedded-opentype"),
+    url("roboto-500.woff") format("woff"),
+    url("roboto-500.woff2") format("woff2"),
+    url("roboto-500.ttf") format("truetype"),
+    url('roboto-500.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("roboto-700.eot");
+    src: url("roboto-700.eot?#iefix") format("embedded-opentype"),
+    url("roboto-700.woff") format("woff"),
+    url("roboto-700.woff2") format("woff2"),
+    url("roboto-700.ttf") format("truetype"),
+    url('roboto-700.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("roboto-900.eot");
+    src: url("roboto-900.eot?#iefix") format("embedded-opentype"),
+    url("roboto-900.woff") format("woff"),
+    url("roboto-900.woff2") format("woff2"),
+    url("roboto-900.ttf") format("truetype"),
+    url('roboto-900.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
