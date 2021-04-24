@@ -7,6 +7,7 @@ $(document).ready(function() {
 
   $('.basket__info').on('click', function() {
     $('.basket__submenu').addClass('basket__submenu--active');
+    $(this).addClass('basket__info--active');
   });
 
   $('#btn--order').on('click', function() {
@@ -18,12 +19,12 @@ $(document).ready(function() {
       $('.overlay-request').removeClass('overlay-active');
     }
     $('.basket__submenu').removeClass('basket__submenu--active');
+    $('.basket__info').removeClass('basket__info--active');
   });
 
   $('.basket__info').on('click', function(e) {
     e.stopPropagation();
-    $('.basket__submenu').addClass('basket__submenu--active');
-  });
+    $('.basket__submenu').addClass('basket__submenu--active');  });
 
   $('.basket__submenu').on('click', function(e) {
     e.stopPropagation();

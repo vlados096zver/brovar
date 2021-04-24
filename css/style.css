@@ -1514,12 +1514,12 @@ img {
 	height: 20px;
 }
 
-.basket__info:hover {
+.basket__info--active {
 	background-color: #fff;
 }
 
-.basket__info:hover:after,
-.basket__info:hover:before {
+.basket__info--active:after,
+.basket__info--active:before {
 	background-color: #115F41;
 }
 
