@@ -3,6 +3,8 @@
 .contacts
 	&__map
 		position: relative
+		z-index: 1
+		pointer-events: none
 		min-height: 1240px
 		margin-top: -385px
 		clip-path: url(#map-desc)
@@ -71,6 +73,8 @@
 			font-size: 17px
 
 	&__elem
+		position: relative
+		z-index: 3
 		margin-top: -240px
 		+media(lg)
 			margin-top: -32px

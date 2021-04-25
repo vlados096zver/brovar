@@ -531,7 +531,7 @@ img {
 .title {
 	max-width: 600px;
 	position: relative;
-	z-index: 3;
+	z-index: 4;
 	font-size: 72px;
 	line-height: 1.2;
 	color: #115F41;
@@ -577,6 +577,8 @@ img {
 }
 
 .btn--send {
+	position: relative;
+	z-index: 3;
 	background-color: #115F41;
 	color: #fff;
 	max-width: 250px;
@@ -684,6 +686,10 @@ img {
 }
 
 .product__cart:hover {
+	background-color: #04140e;
+}
+
+.product__cart--active {
 	background-color: #04140e;
 }
 
@@ -867,6 +873,8 @@ img {
 
 .contacts__map {
 	position: relative;
+	z-index: 1;
+	pointer-events: none;
 	min-height: 1240px;
 	margin-top: -385px;
 	clip-path: url(#map-desc);
@@ -930,6 +938,8 @@ img {
 }
 
 .contacts__elem {
+	position: relative;
+	z-index: 3;
 	margin-top: -240px;
 }
 
