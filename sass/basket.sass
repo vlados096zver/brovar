@@ -187,6 +187,7 @@
 
 	&__col
 		position: relative
+		z-index: 6
 
 	&__info
 		cursor: pointer
@@ -230,7 +231,7 @@
 
 	&__submenu
 		position: absolute
-		z-index: 3
+		z-index: 6
 		opacity: 0
 		visibility: hidden
 		bottom: calc(100% + 36px)
@@ -270,6 +271,8 @@
 			visibility: visible
 
 	&__holder
+		position: relative
+		z-index: 3
 		display: flex
 		align-items: center
 		justify-content: center

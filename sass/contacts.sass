@@ -2,40 +2,50 @@
 
 .contacts
 	&__map
+		display: block
 		position: relative
-		z-index: 1
-		pointer-events: none
-		min-height: 1240px
+		height: 1240px
 		margin-top: -385px
-		clip-path: url(#map-desc)
-		+media(lg)
-			clip-path: url(#map-lg)
-			margin-top: -175px
-			min-height: 800px
 		+media(md)
-			clip-path: url(#map-md)
-			margin-top: -60px
-			min-height: 600px
-		+media(sm)
-			min-height: 400px
-			margin-top: -35px
+			height: 600px
+			margin-top: -170px
 		iframe
 			position: absolute
-			top: -40px
 			display: block
 			width: 100%
-			height: calc(100% + 40px)
+			height: 100%
+
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			z-index: 2
+			left: 0px
+			width: 100%
+			height: 420px
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
+			+media(md)
+				height: 200px
+
+		&:after
+			top: -3px
+			background-image: url(../img/top.svg)
+
+		&:before
+			bottom: -3px
+			background-image: url(../img/bottom.svg)
+			
 
 	&__block
 		position: relative
-		&:after
-			position: absolute
-			content: ' '
-			top: -2px
-			left: 0px
-			width: 100%
-			height: 4px
-			background-color: #fff
 	
 	&__item
 		margin-bottom: 35px
@@ -75,15 +85,13 @@
 	&__elem
 		position: relative
 		z-index: 3
-		margin-top: -240px
-		+media(lg)
-			margin-top: -32px
-		+media(lgs)
-			margin-top: -40px
-		+media(mdx)
-			margin-top: -20px
+		margin-top: -230px
 		+media(md)
-			margin-top: 20px
+			margin-top: -50px
+		+media(sm)
+			margin-top: -65px
+		+media(xs)
+			margin-top: -102px
 
 	&__wrap-error
 		margin-bottom: 10px
@@ -96,3 +104,37 @@
 		font-weight: 700
 		+media(sm)
 			padding-left: 0px
+
+	&__text
+		display: block
+		position: absolute
+		left: 47%
+		top: 46%	
+		max-width: 350px
+		width: 100%
+		+media(sm)
+			left: initial
+			right: 0px
+
+	&__title
+		font-size: 36px
+		line-height: 1.2
+		color: #115F41
+		text-align: center
+		text-transform: uppercase
+		padding-bottom: 11px
+		+media(md)
+			font-size: 30px
+		+media(sm)
+			font-size: 24px
+		
+	&__desc
+		font-size: 18px
+		line-height: 1.2
+		color: #333333
+		text-align: center
+		text-transform: uppercase
+		+media(md)
+			font-size: 17px
+		+media(sm)
+			font-size: 16px
